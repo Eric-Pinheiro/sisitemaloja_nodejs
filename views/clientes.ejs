@@ -1,0 +1,31 @@
+<%- include('partials/header.ejs')%>
+<div class="container-fluid body">
+<div class="container">
+    <h2 class="ps-4 py-3">Pagina de Clientes</h2>
+  <div class="card">
+    <div class="card-header"><h3>Lista de Clientes</h3></div>
+    <div class="card-body">
+        <table class="table text-center table-sm w-100 table-hover table-bordered">
+            <thead>
+            <tr>
+                    <th>Nome</th><th>CPF</th><th>Endereço</th>
+                </tr>
+            </thead>
+                
+            <% ListaClientes.forEach((ListaClientes)=>{%>
+            <tr>
+                <th><%= ListaClientes.nome %></th>
+                <th><%= ListaClientes.cpf %></th>
+                <th><%= ListaClientes.endereco %></th>
+            </tr>
+            
+            <%})%>
+            </table>
+    </div>
+  </div>
+
+</div>
+
+</div>
+<%- include('partials/footer.ejs')%>
+

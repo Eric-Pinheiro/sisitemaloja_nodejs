@@ -1,0 +1,30 @@
+<%- include('partials/header.ejs')%>
+    <div class="container-fluid body">
+        <div class="container">
+            <h2 class="ps-4 py-3">Pagina de Veiculos</h2>
+        
+    <div class="card">
+        <div class="card-header"><h3>Lista de Produtos</h3></div>
+        <div class="card-body">
+            <table class="table text-center w-100 table-hover table-bordered">
+                <thead>
+                <tr>
+                    <th>Nome do Veiculo</th>
+                    <th>Preço</th>
+                    <th>Categoria</th>
+                </tr>
+            </thead>
+            <%listaProdutos.forEach((listaProdutos)=>{%>
+            <tr>
+        <th><%= listaProdutos.nomeProd %></th>
+        <th><%= listaProdutos.preco %></th>
+        <th><%= listaProdutos.categoria %></th>   
+            </tr>
+                <%})%>
+            </table>
+        </div>
+    </div>
+    
+        </div>
+    </div>
+    <%- include('partials/footer.ejs')%>
