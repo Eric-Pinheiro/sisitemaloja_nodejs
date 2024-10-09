@@ -12,7 +12,7 @@ connection.authenticate().then(()=>{
   console.log(error)
 })
 
-connection.query(`create database if not exists loja;`).then(()=>{
+connection.query(`create database if not exists LojaExNode;`).then(()=>{
   console.log("O banco foi criado com sucesso")
 }).catch((error)=>{
   console.log(error)
